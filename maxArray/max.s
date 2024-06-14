@@ -11,7 +11,7 @@ section .text
 
 ;rdi = arr pointer
 ;rsi = arr length
-;rax = max value
+;al = max value
 ;al must be 0
 ;Treating all values as unsigned
 maxNumber:
