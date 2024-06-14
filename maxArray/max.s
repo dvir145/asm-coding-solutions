@@ -44,7 +44,7 @@ _start:
 
 print:
     mov     rdi, msg
-    movzx   rsi, al     ; Move only al to rsi, zero-extending it to 64 bits
+    movzx   rsi, al 
     xor     rax, rax    ; printf expects rax to be 0 for variadic functions
     call    printf
 
