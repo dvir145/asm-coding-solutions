@@ -11,7 +11,7 @@ section .text
 
 ;rdi = arr pointer
 ;rsi = arr length
-;rbx = max value
+;rax = max value
 ;al must be 0
 ;Treating all values as unsigned
 maxNumber:
@@ -34,7 +34,6 @@ maxNumber:
 
 .return:
     pop rbp
-    mov rbx, rax 
     ret   
 
 _start:
@@ -45,7 +44,7 @@ _start:
 
 print:
     mov     rdi, msg
-    mov     rsi, rbx 
+    mov     rsi, rax 
     xor     rax, rax    ; printf expects rax to be 0 for variadic functions
     call    printf
 
